@@ -13,5 +13,6 @@
     },
     "psr-4": {
         "MMHK\\Debugbar\\": ""
-    }
+    },
+    "license": "Apache-2.0"
 }
