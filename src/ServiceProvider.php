@@ -13,7 +13,7 @@ class ServiceProvider extends \Barryvdh\Debugbar\ServiceProvider {
     protected function registerMiddleware($middleware)
     {
         $kernel = $this->app['Illuminate\Contracts\Http\Kernel'];
-        $kernel->pushMiddleware('MMHK/Debugbar/Middleware/Debugbar');
+        $kernel->pushMiddleware('MMHK\Debugbar\Middleware\Debugbar');
     }
 
     /**
@@ -35,6 +35,8 @@ class ServiceProvider extends \Barryvdh\Debugbar\ServiceProvider {
                 return $debugbar;
             }
         );
+
+        $this->app->alias('debugbar', 'MMHK\Debugbar\LaravelDebugbar');
     }
 
 
